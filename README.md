@@ -1,5 +1,4 @@
-TRUPER Image Placeholder
-(WooCommerce Plugin)
+TRUPER Image Placeholder (WooCommerce Plugin)
 ====================================
 Plugin Name: DISTRIBUIDORA GC - TRUPER Image Placeholder
 Plugin URI: http://developercats.com
