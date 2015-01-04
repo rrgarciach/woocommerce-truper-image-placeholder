@@ -1,4 +1,8 @@
-woocommerce-truper-image-placeholder
+DISTRIBUIDORA GC - TRUPER Image Placeholder
 ====================================
-
-Plugin for WooCommerce (WordPress) to replace the default image placeholder for the TRUPER image.
+Plugin Name: DISTRIBUIDORA GC - TRUPER Image Placeholder
+Plugin URI: http://developercats.com
+Description: Plugin for WooCommerce to replace the default image placeholder for the TRUPER image.
+Author: Ruy R. Garcia
+Version: 1.0
+Author URI: http://developercats.com
