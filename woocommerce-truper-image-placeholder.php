@@ -9,30 +9,22 @@ Author URI: http://developercats.com
 */
 
 add_action( 'init', 'custom_fix_thumbnail' );
- 
+
 function custom_fix_thumbnail() {
+	if ($_GET['post_type']!='product' && $_GET['action']!='edit')
 	add_filter('woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src');
    
 	function custom_woocommerce_placeholder_img_src( $src ) {
 		global $product;
 		$upload_dir = wp_upload_dir();
 		$uploads = untrailingslashit( $upload_dir['baseurl'] );
-		$src = 'http://www.truperenlinea.com/reng/info/fichas/img/ch/' . $product->get_sku() . '.jpg';
+		$src = 'http://www.truperenlinea.com/reng/info/fichas/img/gr/' . $product->get_sku() . '.jpg';
 
 		if ( ! imageExists($src) ) {
 			$src = WC()->plugin_url() . '/assets/images/placeholder.png';
-		} else {
-			// # @TODO Fix image size when none square source is provided. 
-			// add_filter( 'woocommerce_get_image_size_shop_single', 'wptt_single_image_size' );
 		}
 		return $src;
 	}
-
-	// function wptt_single_image_size( $size ){
-	//     $size['width'] = '150';
-	//     $size['height'] = '150';
-	//     return $size;		 
-	// }
 
 	function imageExists( $src ) {
 		$file_headers = @get_headers($src);
